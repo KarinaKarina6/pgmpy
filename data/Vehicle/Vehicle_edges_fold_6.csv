@@ -1,0 +1,31 @@
+,edges
+0,pr.axis aspect ratio
+1,radius ratio
+2,scaled variance along major axis
+3,radius ratio
+4,scatter ratio
+5,scaled variance along minor axis
+6,hollows ratio
+7,skewness about major axis
+8,pr.axis rectangularity
+9,max.length rectangularity
+10,elongatedness
+11,scatter ratio
+12,max.length rectangularity
+13,circularity
+14,scatter ratio
+15,scaled variance along major axis
+16,skewness about major axis
+17,radius ratio
+18,scaled variance along minor axis
+19,pr.axis rectangularity
+20,circularity
+21,scaled radius of gyration
+22,distance circularity
+23,elongatedness
+24,distance circularity
+25,max.length aspect ratio
+26,hollows ratio
+27,kurtosis about major axis
+28,scaled variance along minor axis
+29,compactness

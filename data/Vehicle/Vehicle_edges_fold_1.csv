@@ -1,0 +1,121 @@
+,edges
+0,skewness about minor axis
+1,hollows ratio
+2,scatter ratio
+3,circularity
+4,circularity
+5,scaled radius of gyration
+6,scaled variance along minor axis
+7,pr.axis rectangularity
+8,circularity
+9,distance circularity
+10,elongatedness
+11,skewness about major axis
+12,max.length rectangularity
+13,scaled radius of gyration
+14,elongatedness
+15,scatter ratio
+16,scatter ratio
+17,max.length rectangularity
+18,kurtosis about major axis
+19,scaled variance along major axis
+20,scaled variance along major axis
+21,hollows ratio
+22,hollows ratio
+23,compactness
+24,kurtosis about major axis
+25,elongatedness
+26,skewness about major axis
+27,radius ratio
+28,circularity
+29,max.length rectangularity
+30,kurtosis about major axis
+31,compactness
+32,scatter ratio
+33,pr.axis aspect ratio
+34,scaled variance along major axis
+35,max.length aspect ratio
+36,elongatedness
+37,pr.axis aspect ratio
+38,scatter ratio
+39,scaled variance along minor axis
+40,scatter ratio
+41,distance circularity
+42,scaled variance along major axis
+43,radius ratio
+44,kurtosis about major axis
+45,distance circularity
+46,distance circularity
+47,hollows ratio
+48,elongatedness
+49,scaled variance along minor axis
+50,scaled variance along major axis
+51,skewness about major axis
+52,kurtosis about major axis
+53,scatter ratio
+54,kurtosis about major axis
+55,skewness about major axis
+56,pr.axis aspect ratio
+57,radius ratio
+58,distance circularity
+59,max.length aspect ratio
+60,distance circularity
+61,max.length rectangularity
+62,scatter ratio
+63,scaled variance along major axis
+64,kurtosis about major axis
+65,hollows ratio
+66,kurtosis about minor axis
+67,hollows ratio
+68,max.length rectangularity
+69,scaled variance along major axis
+70,scaled variance along minor axis
+71,compactness
+72,max.length rectangularity
+73,hollows ratio
+74,kurtosis about minor axis
+75,circularity
+76,elongatedness
+77,distance circularity
+78,scaled variance along minor axis
+79,radius ratio
+80,distance circularity
+81,scaled radius of gyration
+82,elongatedness
+83,max.length rectangularity
+84,max.length rectangularity
+85,pr.axis rectangularity
+86,kurtosis about major axis
+87,max.length rectangularity
+88,scaled variance along minor axis
+89,max.length rectangularity
+90,elongatedness
+91,scaled variance along major axis
+92,max.length aspect ratio
+93,hollows ratio
+94,kurtosis about major axis
+95,scaled radius of gyration
+96,kurtosis about major axis
+97,scaled variance along minor axis
+98,max.length aspect ratio
+99,pr.axis aspect ratio
+100,scatter ratio
+101,pr.axis rectangularity
+102,scaled variance along minor axis
+103,distance circularity
+104,elongatedness
+105,circularity
+106,max.length rectangularity
+107,compactness
+108,elongatedness
+109,scaled radius of gyration
+110,max.length rectangularity
+111,radius ratio
+112,hollows ratio
+113,skewness about major axis
+114,elongatedness
+115,pr.axis rectangularity
+116,kurtosis about minor axis
+117,scaled variance along minor axis
+118,elongatedness
+119,hollows ratio

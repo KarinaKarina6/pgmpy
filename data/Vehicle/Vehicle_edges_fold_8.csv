@@ -1,0 +1,83 @@
+,edges
+0,max.length rectangularity
+1,scaled variance along major axis
+2,hollows ratio
+3,circularity
+4,max.length rectangularity
+5,kurtosis about major axis
+6,scaled variance along minor axis
+7,elongatedness
+8,kurtosis about major axis
+9,elongatedness
+10,skewness about major axis
+11,radius ratio
+12,kurtosis about major axis
+13,compactness
+14,scaled variance along major axis
+15,max.length aspect ratio
+16,scatter ratio
+17,pr.axis aspect ratio
+18,kurtosis about major axis
+19,pr.axis rectangularity
+20,distance circularity
+21,max.length aspect ratio
+22,hollows ratio
+23,pr.axis rectangularity
+24,kurtosis about major axis
+25,circularity
+26,scatter ratio
+27,scaled variance along major axis
+28,kurtosis about major axis
+29,scaled variance along major axis
+30,skewness about major axis
+31,scaled variance along major axis
+32,scaled variance along minor axis
+33,radius ratio
+34,hollows ratio
+35,compactness
+36,kurtosis about minor axis
+37,kurtosis about major axis
+38,scaled variance along minor axis
+39,compactness
+40,max.length rectangularity
+41,hollows ratio
+42,hollows ratio
+43,distance circularity
+44,kurtosis about major axis
+45,skewness about major axis
+46,max.length aspect ratio
+47,pr.axis aspect ratio
+48,elongatedness
+49,pr.axis aspect ratio
+50,scatter ratio
+51,scaled variance along minor axis
+52,max.length rectangularity
+53,scatter ratio
+54,circularity
+55,scaled radius of gyration
+56,hollows ratio
+57,elongatedness
+58,hollows ratio
+59,kurtosis about major axis
+60,scatter ratio
+61,elongatedness
+62,elongatedness
+63,distance circularity
+64,pr.axis rectangularity
+65,scatter ratio
+66,scaled variance along major axis
+67,radius ratio
+68,kurtosis about major axis
+69,distance circularity
+70,max.length rectangularity
+71,circularity
+72,hollows ratio
+73,scaled radius of gyration
+74,circularity
+75,pr.axis rectangularity
+76,max.length rectangularity
+77,scaled radius of gyration
+78,pr.axis aspect ratio
+79,radius ratio
+80,hollows ratio
+81,skewness about major axis

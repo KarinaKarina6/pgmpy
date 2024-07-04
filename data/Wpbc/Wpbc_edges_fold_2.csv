@@ -1,0 +1,65 @@
+,edges
+0,concavity_se
+1,concavity_mean
+2,radius_worst
+3,area_worst
+4,radius_mean
+5,perimeter_mean
+6,fractal_dimension_worst
+7,fractal_dimension_mean
+8,radius_se
+9,area_se
+10,compactness_se
+11,concavity_se
+12,compactness_mean
+13,perimeter_mean
+14,fractal_dimension_se
+15,compactness_se
+16,concavity_se
+17,concave points_se
+18,concavity_worst
+19,smoothness_se
+20,fractal_dimension_worst
+21,compactness_worst
+22,texture_worst
+23,texture_mean
+24,perimeter_se
+25,radius_se
+26,smoothness_mean
+27,fractal_dimension_mean
+28,smoothness_worst
+29,smoothness_se
+30,concavity_se
+31,smoothness_se
+32,area_mean
+33,radius_worst
+34,radius_worst
+35,perimeter_worst
+36,compactness_worst
+37,concavity_worst
+38,radius_mean
+39,area_mean
+40,concave points_mean
+41,concavity_mean
+42,concave points_worst
+43,concave points_mean
+44,fractal_dimension_mean
+45,compactness_mean
+46,area_worst
+47,area_se
+48,concavity_mean
+49,compactness_mean
+50,concavity_worst
+51,concavity_mean
+52,compactness_mean
+53,symmetry_mean
+54,symmetry_mean
+55,symmetry_worst
+56,fractal_dimension_mean
+57,radius_mean
+58,concavity_worst
+59,concave points_worst
+60,concave points_mean
+61,radius_mean
+62,smoothness_worst
+63,smoothness_mean

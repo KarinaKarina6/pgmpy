@@ -1,3 +1,12 @@
+from sklearn.model_selection import train_test_split
+from numpy import std, mean, log
+from scipy.stats import norm
+from ML import ML_models
+from sklearn.metrics import mean_squared_error
+import pandas as pd
+
+ 
+
 #!/usr/bin/env python
 from math import lgamma, log
 
@@ -68,7 +77,7 @@ class StructureScore(BaseEstimator):
 
         score = 0
         for node in model.nodes():
-            score += self.local_score(node, model.predecessors(node))
+            score += self.local_score(node, model.predecessors(node), model=model.nodes[node]['ML_model'])
         score += self.structure_prior(model)
         return score
 
@@ -354,7 +363,7 @@ class BicScore(StructureScore):
     def __init__(self, data, **kwargs):
         super(BicScore, self).__init__(data, **kwargs)
 
-    def local_score(self, variable, parents):
+    def local_score(self, variable, parents, model = None):
         'Computes a score that measures how much a \
         given variable is "influenced" by a given list of potential parents.'
 
@@ -383,6 +392,98 @@ class BicScore(StructureScore):
         score -= 0.5 * log(sample_size) * num_parents_states * (var_cardinality - 1)
 
         return score
+
+
+class CompositeScore(StructureScore):
+
+    def __init__(self, data, **kwargs):
+        super(CompositeScore, self).__init__(data, **kwargs)
+
+    def local_score(self, variable, parents, model=None):
+        uci_datasets = ['Balance', 'Block', 'Breast_cancer', 'Breast_tissue',
+ 'CPU', 'Ecoli', 'Glass', 'Iris', 'Liver', 'Parkinsons',
+ 'QSAR Aquatic', 'QSAR fish toxicity', 'Sonar', 'Vehicle', 
+ 'Vowel', 'Wdbc', 'Wine', 'Wpbc', 'Yeast']
+        try:
+            node = variable
+            parents = list(parents)
+            if self.data.attrs['len_train']:
+                data_train = self.data[:self.data.attrs['len_train']]
+                data_test = self.data[self.data.attrs['len_train']:]
+            else:
+                data_train, data_test = train_test_split(self.data, test_size=0.1, shuffle = True, random_state=self.data.attrs['random_seed'])
+            score, len_data = 0, len(data_train)
+            data_of_node_train = data_train[node]
+            data_of_node_test = data_test[node]                   
+
+            if parents == []:
+                # if node.content['type'] == 'cont':
+                # if pd.api.types.is_numeric_dtype(data_of_node_train.dtype):
+                if node not in self.data.attrs['str_columns']:
+                    mu, sigma = mean(data_of_node_train), std(data_of_node_train) + 0.0000001
+                    lg = norm.logpdf(data_of_node_test.values, loc=mu, scale=sigma).sum()
+                    score += lg
+                else:
+                    count = data_of_node_train.value_counts()
+                    # frequency  = log((count) / len_data)
+                    # frequency  = np.log(count.to_numpy() / len_data)
+                    frequency = pd.Series(data = np.log(count.to_numpy() / len_data), index = count.index)
+                    index = count.index.tolist()
+                    for value in data_of_node_test:
+                        if value in index:
+                            score += frequency[value]
+
+            else:
+                mm = ML_models(self.data)
+                mmm = mm.dict_models[model]()
+                model, columns, target, idx = mmm, parents, data_of_node_train.to_numpy(), data_train.index.to_numpy()
+                setattr(model, 'max_iter', 100000)
+                features = data_train[columns].to_numpy()                
+                if len(set(target)) == 1:
+                    return score
+                            
+                fitted_model = model.fit(features, target)
+
+                idx=data_test.index.to_numpy()
+                features=data_test[columns].to_numpy()
+                target=data_of_node_test.to_numpy()            
+                # if pd.api.types.is_numeric_dtype(data_of_node_train.dtype):
+                if node not in self.data.attrs['str_columns']:
+                    predict = fitted_model.predict(features)        
+                    mse =  mean_squared_error(target, predict, squared=False) + 0.0000001
+                    a = norm.logpdf(target, loc=predict, scale=mse)
+                    score += a.sum()                
+                else:
+                    predict_proba = fitted_model.predict_proba(features)
+                    idx = pd.array(list(range(len(target))))
+                    li = []
+                    
+                    for i in idx:
+                        a = predict_proba[i]
+                        try:
+                            b = a[target[i]]
+                        except:
+                            b = 0.0000001
+                        if b<0.0000001:
+                            b = 0.0000001
+                        li.append(log(b))
+                    score += sum(li)
+
+
+            # try:
+            #     score = round(score)
+            # except:
+            #     score = score
+            score = round(score)
+        except Exception as ax:
+            print(ax)
+            print(parents)
+            print(model)
+
+
+        return score
+
+
 
 
 class AICScore(StructureScore):

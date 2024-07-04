@@ -1,0 +1,27 @@
+,edges
+0,radius_mean
+1,perimeter_mean
+2,concavity_worst
+3,compactness_worst
+4,radius_worst
+5,perimeter_worst
+6,radius_mean
+7,area_mean
+8,texture_worst
+9,texture_mean
+10,radius_worst
+11,area_worst
+12,radius_se
+13,perimeter_se
+14,radius_mean
+15,radius_worst
+16,radius_se
+17,area_se
+18,concave points_mean
+19,concavity_mean
+20,compactness_mean
+21,perimeter_mean
+22,concave points_mean
+23,concave points_worst
+24,concavity_mean
+25,compactness_mean

@@ -8,6 +8,7 @@ from pgmpy.estimators.StructureScore import (
     BDsScore,
     BicScore,
     AICScore,
+    CompositeScore
 )
 from pgmpy.estimators.ExhaustiveSearch import ExhaustiveSearch
 from pgmpy.estimators.HillClimbSearch import HillClimbSearch
